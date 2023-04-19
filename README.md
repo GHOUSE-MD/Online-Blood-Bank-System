@@ -1,6 +1,6 @@
 # Online-Blood-Bank-System
 
-Note :- Patent has been filed on this application.
+Note :- Patent has been filed on this application. Few files has been deleted for safety purpose.
 
 
 Problem :- Whenever people need blood they seek help on social media platforms and I hope you have recieved some message or shared it. However, 
