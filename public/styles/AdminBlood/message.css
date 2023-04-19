@@ -1,0 +1,35 @@
+table,
+tr,
+td,
+th {
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table button {
+  color: white;
+  border: none;
+  padding: 3px;
+  background-color: rgb(217, 25, 25);
+  cursor: pointer;
+}
+
+#main-title {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 50px;
+}
+
+table.dark {
+  color: white;
+}
+
+#main-content table.dark,
+#main-content tr.dark,
+#main-content td.dark,
+#main-content th.dark {
+  border: 1px solid white;
+}

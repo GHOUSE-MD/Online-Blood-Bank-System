@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs')%>
+    <link rel="stylesheet" href="/styles/donate.css" />
+    <script src="/scripts/location.js" async></script>
+    <script src="/scripts/donate.js" defer></script>
+    <title>Forms</title>
+  </head>
+  <body>
+    <%- include('includes/header.ejs')%>
+    <main>
+      <h1>Donate Blood</h1>
+
+      <section id="donarform">
+        <section>
+          <!-- <p>Click the button to get your coordinates.</p>
+          <button onclick="getLocation()">Try It</button> -->
+          <p id="demo1" name="demo1"></p>
+          <p id="demo2" name="demo2"></p>
+        </section>
+
+        <section id="post">
+          <form action="/donate" method="POST">
+            <section id="section-1">
+              <input id="lat" name="demo1" type="text" />
+              <input id="long" name="demo2" type="text" />
+              <ul>
+                <li>
+                  <label for="full-name">Full Name</label>
+                  <input type="text" id="fullname" name="fullname"  required/>
+                </li>
+                <li>
+                  <label for="mobile-no">Mobile Number</label>
+                  <input type="tel" id="mobileno" name="mobileno" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" required>
+                </li>
+                <li>
+                  <label for="email">E-Mail Address</label>
+                  <input type="email" id="email" name="email" required/>
+                </li>
+              </ul>
+            </section>
+            <section id="section-2">
+              <ul>
+                <li>
+                  <label for="age">Age</label>
+                  <input type="tel" id="age" name="age" required/>
+                </li>
+                <li>
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender" required>
+                    <option value="select">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">other</option>
+                  </select>
+                </li>
+                <li>
+                  <label for="blood-group">Blood group</label>
+                  <select id="bloodgroup" name="bloodgroup" required>
+                    <% for(const bg of bgs) {%>
+                    <option value="<%=bg._id %>"><%= bg.name %></option>
+                    <% } %>
+                  </select>
+                </li>
+              </ul>
+            </section>
+            <section id="section-3">
+              <li>
+                <label for="mandal">mandal</label>
+                <select id="mandal" name="mandal" required  >
+                  <% for(const mandal of mandals) {%>
+                  <option value="<%=mandal._id %>"><%= mandal.name %></option>
+                  <% } %>
+                </select>
+              </li>
+            </section>
+            <section id="section-4">
+              <label for="blood-group">Address</label>
+              <textarea id="address" name="address" required></textarea>
+            </section>
+
+            <section id="section-5">
+              <button id="button" type="submit">SUBMIT</button>
+            </section>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <%- include('includes/footer.ejs')%>;
+  </body>
+</html>

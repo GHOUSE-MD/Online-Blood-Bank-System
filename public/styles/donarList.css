@@ -1,0 +1,26 @@
+#ordered-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#color p {
+    font-size: 17px;
+}
+
+#ordered-list #list-item:first-child {
+    margin-top: 5rem;
+}
+
+#list-item {
+    background-color: rgb(168, 81, 81);
+    width: 40%;
+    margin: auto;
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#view-more {
+    float: right;
+}

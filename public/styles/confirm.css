@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 130vh;
+}
+
+section {
+  padding: 12px;
+  text-align: center;
+  margin: 3rem auto 20rem auto;
+}
+
+footer {
+  margin-top: auto;
+}
+
+section h1 {
+  margin: 25px;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: rgb(176, 69, 69);
+  text-shadow: 2px 2px #494040;
+}
+
+section p {
+  font-size: 30px;
+  color: rgb(39, 39, 39);
+}

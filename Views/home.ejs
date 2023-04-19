@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+    <link rel="stylesheet" href="/styles/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <%- include('includes/header.ejs')%>
+    <main>
+      <section id="top-part">
+        <div class="container">
+          <div class="arrow l" onclick="prev()">
+            <img src="/images/l.png" alt="l" />
+          </div>
+          <div class="slide slide-1">
+            <div class="caption">
+              <h3>Donate Blood</h3>
+              <p style="font-size: 20px; font-weight: bold;">Don't let mosquitoes get to your blood first!</p>
+              <p></p>
+            </div>
+          </div>
+          <div class="slide slide-2">
+            <div class="caption">
+              <h3>Donate Blood</h3>
+              <p style="font-size: 20px; font-weight: bold;">Whatever you do always give your 100%, unless you're donating blood!</p>
+            </div>
+          </div>
+          <div class="slide slide-3">
+            <div class="caption">
+              <h3>Donate Blood</h3>
+              <p style="font-size: 20px; font-weight: bold;">You don't have to be Batman to save lives, just donate blood!</p>
+            </div>
+          </div>
+          <div class="arrow r" onclick="next()">
+            <img src="/images/r.png" alt="r" />
+          </div>
+        </div>
+
+        <script>
+          let slide = document.querySelectorAll(".slide");
+          var current = 0;
+
+          function cls() {
+            for (let i = 0; i < slide.length; i++) {
+              slide[i].style.display = "none";
+            }
+          }
+
+          function next() {
+            cls();
+            if (current === slide.length - 1) current = -1;
+            current++;
+
+            slide[current].style.display = "block";
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+              x += 0.1;
+              slide[current].style.opacity = x;
+              if (x >= 1) {
+                clearInterval(intX);
+                x = 0.4;
+              }
+            }, 100);
+          }
+
+          function prev() {
+            cls();
+            if (current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = "block";
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+              x += 0.1;
+              slide[current].style.opacity = x;
+              if (x >= 1) {
+                clearInterval(intX);
+                x = 0.4;
+              }
+            }, 100);
+          }
+
+          function start() {
+            cls();
+            slide[current].style.display = "block";
+          }
+          start();
+        </script>
+      </section>
+      <section id="bottom-part">
+        <div id="blood-group">
+          <h2>
+            Total <span> blood donors </span> registered with the blood bank
+            today!
+          </h2>
+
+          <ul>
+            <li>
+              A+
+              <p><%= Ap %></p>
+            </li>
+            <li>
+              A-
+              <p><%= An %></p>
+            </li>
+            <li>
+              AB+
+              <p><%=ABp %></p>
+            </li>
+            <li>
+              AB-
+              <p><%= ABn %></p>
+            </li>
+            <li>
+              B+
+              <p><%= Bp %></p>
+            </li>
+            <li>
+              B-
+              <p><%= Bn %></p>
+            </li>
+            <li>
+              O+
+              <p><%= Op %></p>
+            </li>
+            <li>
+              O-
+              <p><%= On %></p>
+            </li>
+          </ul>
+        </div>
+        <div id="information">
+          <h2>Blood groups</h2>
+          <p>
+            Blood group of any human being will mainly fall in any one of the
+            following groups.
+          </p>
+          <ul>
+            <li>A positive or A negative</li>
+            <li>B positive or B negative</li>
+            <li>O positive or O negative</li>
+            <li>AB positive or AB negative</li>
+          </ul>
+          <p>
+            Your blood group is determined by the genes you inherit from your
+            parents. A healthy diet helps ensure a successful blood donation,
+            and also makes you feel better!
+          </p>
+        </div>
+        <div id="compatible-table">
+          <table>
+            <caption>
+              which
+              <span>blood types</span>
+              am i compatible with?
+            </caption>
+            <tr>
+              <th>blood type</th>
+              <th>can give to</th>
+              <th>can receive from</th>
+            </tr>
+            <tr>
+              <td>A+</td>
+              <td>A+, AB+</td>
+              <td>A+, A-, O+, O-</td>
+            </tr>
+            <tr>
+              <td>O+</td>
+              <td>O+, A+, B+, AB+</td>
+              <td>O+, O-</td>
+            </tr>
+            <tr>
+              <td>B+</td>
+              <td>B+, AB+</td>
+              <td>B+, B-, O+, O-</td>
+            </tr>
+            <tr>
+              <td>AB+</td>
+              <td>AB+</td>
+              <td>everyone</td>
+            </tr>
+            <tr>
+              <td>A-</td>
+              <td>A+, A-, AB+, AB-</td>
+              <td>A-, O-</td>
+            </tr>
+            <tr>
+              <td>O-</td>
+              <td>everyone</td>
+              <td>O-</td>
+            </tr>
+            <tr>
+              <td>B-</td>
+              <td>B+, B-, AB+, AB-</td>
+              <td>B-, O-</td>
+            </tr>
+            <tr>
+              <td>AB-</td>
+              <td>AB+, AB-</td>
+              <td>AB-, A-, B-, O-</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+    <%- include('includes/footer.ejs')%>;
+  </body>
+</html>

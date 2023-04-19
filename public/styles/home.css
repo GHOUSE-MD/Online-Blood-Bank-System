@@ -1,0 +1,237 @@
+/* Body CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#bottom-part {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#bottom-part div {
+  background-image: linear-gradient(rgb(186, 151, 146), #f95742);
+  margin: 30px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#bottom-part div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#blood-group h2 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: normal;
+  text-align: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+#blood-group ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 70px;
+  /* margin-left: 100px; */
+}
+
+#blood-group li {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: rgb(255, 225, 0);
+  padding: 20px;
+  /* width: 60%; */
+  position: relative;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+#blood-group p {
+  position: relative;
+  top: 15px;
+  font-weight: normal;
+}
+
+#blood-group li:nth-of-type(3),
+#blood-group li:nth-of-type(4) {
+  padding-left: 25px;
+}
+
+#information h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#information {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+#information li {
+  list-style: none;
+  margin: 14px 0;
+  margin-left: 15px;
+  padding-left: 10px;
+  border-left: 3px solid black;
+}
+
+#compatible-table {
+  text-align: center;
+  overflow-x: auto;
+}
+
+table {
+  max-width: 100%;
+}
+
+table,
+td,
+th {
+  border: 3px solid black;
+  border-collapse: collapse;
+  margin: 10px auto;
+  padding: 15px;
+}
+
+#compatible-table caption {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+#compatible-table th {
+  text-transform: uppercase;
+}
+
+#compatible-table tr:first-child th {
+  border-top: none;
+}
+
+.container {
+  position: relative;
+  background: #aad5f6;
+}
+
+.slide-1 {
+  background-image: url("/images/IMG_8104.JPG");
+}
+
+.slide-2 {
+  background-image: url("/images/IMG_8172.JPG");
+}
+
+.slide-3 {
+  background-image: url("/images/IMG_9043.JPG");
+}
+
+.slide {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.caption {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 40px 0;
+}
+
+.caption h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  padding: 18px;
+}
+
+.caption p {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  color: #ccc;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: background 500ms;
+}
+
+.arrow img {
+  width: 50px;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.l {
+  left: 0;
+}
+
+.r {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  #bottom-part {
+    grid-template-columns: 1fr;
+  }
+
+  #blood-group ul {
+    grid-template-columns: 1fr;
+  }
+
+  #information {
+    grid-column: 1 / 3 span;
+  }
+}
+
+@media (max-width: 420px) {
+  #bottom-part {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  #bottom-part {
+    align-items: center;
+    justify-content: center;
+  }
+}

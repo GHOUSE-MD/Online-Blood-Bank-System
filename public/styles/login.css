@@ -1,0 +1,110 @@
+/* Login page Sstyling */
+main {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  background-image: url(/images/360_F_67704008_fxdmJ8wDOqDYts9P3tzdbxqZf8NfWT21.jpg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.login-title {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  text-align: center;
+  margin-left: 65px;
+}
+
+.login-container {
+  position: absolute;
+  top: 40%;
+  left: 39%;
+}
+
+.login-input-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input-field input {
+  width: 150%;
+  height: 8vh;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  border-bottom: 2px solid red;
+}
+
+.login-input-field-button {
+  text-align: center;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.login-input-field-button button {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(198, 40, 40);
+  cursor: pointer;
+  color: white;
+}
+
+.login-input-field-button button:hover {
+  background-color: rgb(32, 28, 28);
+}
+
+/* Register page styling */
+
+.register-title {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  text-align: center;
+  margin-left: 65px;
+}
+
+.register-container {
+  position: absolute;
+  top: 35%;
+  left: 39%;
+}
+
+.register-input-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-input-field input {
+  width: 150%;
+  height: 8vh;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  border-bottom: 2px solid red;
+}
+
+.register-input-field-button {
+  text-align: center;
+  margin-left: 70px;
+  margin-top: 25px;
+}
+
+.register-input-field-button button {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(198, 40, 40);
+  cursor: pointer;
+  color: white;
+}
+
+.register-input-field-button button:hover {
+  background-color: rgb(32, 28, 28);
+}

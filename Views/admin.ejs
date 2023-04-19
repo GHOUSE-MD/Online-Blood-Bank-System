@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/adminHead.ejs')%>
+    <link rel="stylesheet" href="/styles/AdminBlood/admin.css" />
+    <script async src="https://api.countapi.xyz/hit/codefoxx.com/e7ccbc0d-8d1c-485a-aa29-04bf01a8d0c8?callback=websiteVisits"></script>
+    <script src="/scripts/adminB/script.js" defer></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <%- include('includes/adminAside.ejs')%>
+
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <%- include('includes/adminNavigation.ejs')%>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="/home">AdminHub</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3><%= count  %></h3>
+              <p>Registrations</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3><span id="visits"></span></h3>
+              <p>Visitors</p>
+            </span>
+          </li>
+        </ul>
+
+        <ul class="blood-requests">
+          <li>
+            <img src="/images/A+.png" alt="A+" />
+            <span class="text">
+              <h3><%= Ap %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/A-.png" alt="A-" />
+            <span class="text">
+              <h3><%= An %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/B+.png" alt="B+" />
+            <span class="text">
+              <h3><%= Bp %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/B-.png" alt="B-" />
+            <span class="text">
+              <h3><%= Bn %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/O+.png" alt="O+" />
+            <span class="text">
+              <h3><%= Op %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/O-.png" alt="O-" />
+            <span class="text">
+              <h3><%= On %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/AB+.png" alt="AB+" />
+            <span class="text">
+              <h3><%= ABp %></h3>
+            </span>
+          </li>
+          <li>
+            <img src="/images/AB-.png" alt="AB-" />
+            <span class="text">
+              <h3><%= ABn %></h3>
+            </span>
+          </li>
+        </ul>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Recent Donations</h3>
+              <i class="bx bx-search"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Donor</th>
+                  <th>Email</th>
+                  <th>Blood Type</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <% for(const info of infos){ %> <%-
+                  include('includes/admin-Donation.ejs',{info:info})%> <% } %>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+  </body>
+</html>

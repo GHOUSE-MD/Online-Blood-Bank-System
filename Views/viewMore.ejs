@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs')%>
+    <link rel="stylesheet" href="/styles/confirm.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/viewMore.css" />
+  </head>
+  <body>
+    <%- include('includes/header.ejs')%>
+
+    <main>
+      <div class="container">
+        <h1><%= info.name  %></h1>
+        <ul>
+          <li>Blood group: <span id="user-name"><%= info.bg.name  %></span></li>
+          <li>Age: <span id="user-age"><%= info.age  %></span></li>
+          <li>Gender: <span id="user-gender"><%= info.gender  %></span></li>
+
+          <li>Email: <span id="user-email"><%= info.email  %></span></li>
+          <li>Contact Number: <span id="user-number"><%= info.mobileNo  %></span></li>
+          <li>Address: <span id="user-address"><%= info.address  %></span></li>
+        </ul> 
+      </div>
+    </main>
+
+    <%- include('includes/footer.ejs')%>;
+  </body>
+</html>

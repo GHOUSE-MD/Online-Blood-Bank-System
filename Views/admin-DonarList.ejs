@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/adminHead.ejs')%>
+    <link rel="stylesheet" href="/styles/AdminBlood/donarList.css" />
+    <script src="/scripts/adminB/script.js" defer></script>
+
+    <title>Donor List</title>
+  </head>
+  <body>
+    <%- include('includes/adminAside.ejs')%>
+    <section id="content">
+      
+      <%- include('includes/adminNavigation.ejs')%>
+    
+      <main class="box">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">AdminHub</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Donor List</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section id="main-content">
+          <% if(!infos || infos.length==0) { %>
+            <h1 id="main-title">No Donar available</h1>
+            <% } else{ %>
+          <table class="table-section">
+            <tr>
+              <th>Full Name</th>
+              <th>Mobile Number</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Blood Group</th>
+              <th>Mandal</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <% for(const info of infos){ %> <%-
+              include('includes/admin-DList.ejs',{info:info})%> <% } %>
+            </tr>
+          </table>
+          <% } %>
+        </section>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+  </body>
+</html>

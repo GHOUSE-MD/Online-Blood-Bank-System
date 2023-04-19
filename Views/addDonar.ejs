@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/adminHead.ejs')%>
+    <link rel="stylesheet" href="/styles/AdminBlood/addDonar.css" />
+    <script src="/scripts/adminB/script.js" defer></script>
+
+    <title>Add Donor</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <%- include('includes/adminAside.ejs')%>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <%- include('includes/adminNavigation.ejs')%>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      
+      <main class="box">
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">AdminHub</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Add Donor</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section id="main-content">
+          <form action="/addDonar" method="post">
+            <div>
+              <label for="full-name" class="formText">Full Name</label>
+              <input
+                name="fullname"
+                type="text"
+                id="full-name"
+                class="formContainer"
+                required
+              />
+            </div>
+            <div>
+              <label for="mobile-number" class="formText">Mobile Number</label>
+              <input
+                name="mobileno"
+                type="tel"
+                id="mobile-number"
+                class="formContainer"
+                pattern="[0-9]{10}" 
+                title="Please enter a 10-digit mobile number"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="formText">E-Mail Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="formContainer"
+                required
+              />
+            </div>
+            <div>
+              <label for="age" class="formText">Age</label>
+              <input type="tel" name="age" id="age" class="formContainer" required/>
+            </div>
+            <div>
+              <label for="gender" class="formText">Gender</label>
+              <select name="gender" id="gender" class="formContainer" required>
+                <option value="select">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="blood-group" class="formText">Blood Group</label>
+              <select id="blood-group" name="bloodgroup" class="formContainer" required>
+                <% for(const bg of bgs) {%>
+                <option value="<%=bg._id %>"><%= bg.name %></option>
+                <% } %>
+              </select>
+            </div>
+            <div>
+              <label for="mandal" class="formText">Mandal</label>
+              <select id="mandal" name="mandal" class="formContainer" required>
+                <% for(const mandal of mandals) {%>
+                <option value="<%=mandal._id %>"><%= mandal.name %></option>
+                <% } %>
+              </select>
+            </div>
+            <div id="textarea-div">
+              <label for="address" class="formText">Address</label>
+              <textarea
+                name="address"
+                id="address"
+                cols=""
+                rows="5"
+                class="formContainer"
+                required
+              ></textarea>
+            </div>
+            <div id="submit-button-div">
+              <button id="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+  </body>
+</html>

@@ -1,0 +1,148 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(255, 167, 167);
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  position: relative;
+  margin: 3.125rem auto;
+}
+
+.contact-box {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+}
+
+.contact-left {
+  flex-basis: 60%;
+  padding: 2.5rem 3.75rem;
+}
+
+.contact-right {
+  flex-basis: 40%;
+  padding: 1.5rem;
+  background-color: rgb(20, 20, 197);
+  border-radius: 5px;
+  color: #fff;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.container p {
+  margin-bottom: 1.25rem;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.input-row .input-group {
+  flex-basis: 45%;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  padding-bottom: 0.3125rem;
+  padding: 0.55rem;
+  border: 1px solid rgb(152, 159, 184);
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid rgb(152, 159, 184);
+  outline: none;
+  padding: 0.625rem;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 0.375rem;
+  display: block;
+  color: rgb(20, 20, 197);
+}
+
+.contact-box button {
+  font: inherit;
+  color: white;
+  background-color: rgb(20, 20, 197);
+  border-color: rgb(20, 20, 197);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgb(20, 20, 197);
+  margin-top: 1rem;
+}
+
+.contact-left h3 {
+  color: rgb(20, 20, 197);
+  font-weight: bold;
+  margin-bottom: 1.875rem;
+}
+
+.contact-right h3 {
+  font-weight: bold;
+  margin-bottom: 1.875rem;
+}
+
+tr td:first-child {
+  padding-right: 1.25rem;
+}
+
+tr td {
+  padding-top: 1.25rem;
+}
+
+#address-label {
+  vertical-align: top;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+@media (max-width: 48rem) {
+  .contact-box {
+    flex-direction: column;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  form .input-row div {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 30rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

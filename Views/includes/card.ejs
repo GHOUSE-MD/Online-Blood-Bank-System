@@ -1,0 +1,31 @@
+
+<div id="color">
+  <h2 class="backdrop-name"><%= info.name%></h2>
+  <p>Blood Group: <span class="donor-details"><%= info.bg.name%></span></p>
+  <p>Age: <span class="donor-details"><%= info.age%></span></p>
+  <p id="last-detail">
+    Email:
+    <span class="donor-details"><%= info.email%></span>
+    <span class="view-more-button">
+      <a id="view-more" href="/needBlood/<%= info._id%>">View More &#8594;</a>
+    </span>
+  </p>
+</div>
+
+<head>
+  <style>
+    .backdrop-name {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    p {
+      line-height: 35px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    } 
+  </style>
+</head>

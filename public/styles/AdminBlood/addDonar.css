@@ -1,0 +1,86 @@
+:root {
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", sans-serif;
+
+  --light: #f9f9f9;
+  --blue: #3c91e6;
+  --light-blue: #cfe8ff;
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  --dark: #342e37;
+  --red: #db504a;
+  --yellow: #ffce26;
+  --light-yellow: #fff2c6;
+  --orange: #fd7238;
+  --light-orange: #ffe0d3;
+}
+
+#main-content {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  width: 98%;
+  height: 420px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#main-content.dark {
+  background: #0c0c1e;
+  border: 2px solid white;
+}
+
+#main-content form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.formText.dark {
+  color: white;
+}
+
+.formContainer.dark {
+  background: #060714;
+  color: white;
+}
+
+#main-content form div {
+  margin-right: 70px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content form input {
+  width: 200px;
+  height: 30px;
+}
+
+#main-content form select {
+  width: 200px;
+  height: 30px;
+}
+
+#submit-button-div {
+  grid-row: 4;
+  margin-left: 125%;
+  position: relative;
+  bottom: 15px;
+}
+
+#submit {
+  width: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--grey);
+}
+
+#submit:hover {
+  background-color: var(--blue);
+}
+
+#submit.dark {
+  color: white;
+}

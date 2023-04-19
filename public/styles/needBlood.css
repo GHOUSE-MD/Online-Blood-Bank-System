@@ -1,0 +1,173 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#lat,
+#long {
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(255, 167, 167);
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+main form {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.125rem;
+  margin-bottom: 1.25rem;
+  color: aliceblue;
+  width: 40rem;
+  margin: auto;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  text-transform: capitalize;
+  color: rgb(66, 76, 91);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 1.5rem;
+  padding: 0.55rem;
+  border: 1px solid rgb(152, 159, 184);
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  margin-top: 0;
+  resize: none;
+}
+
+#section-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#section-2 button {
+  width: 10rem;
+  margin: 0 auto;
+  font: inherit;
+  color: white;
+  background-color: #24a0ed;
+  border-color: #24a0ed;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px #24a0ed;
+  margin-top: 1rem;
+}
+
+div {
+  width: 50rem;
+  margin: auto;
+}
+
+.donor-card {
+  display: none;
+}
+
+.donor-card #card-li {
+  display: flex;
+  margin: 1rem;
+  justify-content: center;
+  background-color: rgba(158, 46, 46, 0.925);
+  height: 30vh;
+  border-radius: 15px;
+  border-color: aliceblue;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+
+  /* display: none; */
+}
+
+.donor-card h2 {
+  text-align: center;
+  position: relative;
+  top: 0.625rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: rgb(246, 246, 246);
+  text-shadow: 2px 3px 4px #000000;
+}
+
+.donor-card p {
+  margin: 0.5rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 3px 4px #000000;
+}
+
+.donor-card li {
+  margin-left: 0.625rem;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.donor-details {
+  font-weight: bold;
+}
+
+#last-detail {
+  display: inline-block;
+}
+
+.view-more {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+  margin-right: 1.25rem;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.3125rem;
+}
+
+.view-more:hover {
+  transition: 0.7s;
+  background-color: rgb(234, 151, 164);
+}
+
+@media (max-width: 42rem) {
+  main form {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    margin-bottom: 1.25rem;
+  }
+}

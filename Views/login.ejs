@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="scripts/login.js" defer></script>
+    <link rel="stylesheet" href="styles/login.css" />
+    <%- include('includes/head.ejs')%>
+  </head>
+  <body>
+    <%- include('includes/header.ejs')%>
+    <main>
+      <div class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form action="/login" method="post">
+          <% if(InputData.hasError) { %>
+          <p><%= InputData.message %></p>
+          <% } %>
+          <div class="login-input-field-container">
+            <div class="login-input-field">
+              <input
+                type="text"
+                class="input"
+                name="email"
+                value="<%= InputData.email %>"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="login-input-field">
+              <input
+                type="password"
+                name="password"
+                class="password"
+                value="<%= InputData.password %>"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div class="login-input-field-button">
+              <button>Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('includes/footer.ejs')%>
+  </body>
+</html>

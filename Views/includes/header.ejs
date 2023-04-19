@@ -1,0 +1,37 @@
+<header>
+  <nav>
+    <ul class="nav-bar">
+      <li class="main-page">
+        <a href="/">Blood bank and Donation</a>
+      </li>
+      <input type="checkbox" id="check" />
+      <span class="menu">
+        <% if(!locals.isAuth){ %>
+
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Signup</a></li>
+        <%} %> <% if(locals.isAdmin){ %>
+        <li><a href="/admin">Admin</a></li>
+        <%} %> <% if(locals.isAuth){ %>
+
+        <li><a href="/needBlood">Need Blood</a></li>
+        <li><a href="/donate">Become a Donor</a></li>
+        <li><a href="/whyDonate">Why Donate Blood</a></li>
+        <li><a href="/aboutUs">About us</a></li>
+        <li><a href="/contactUs">Contact us</a></li>
+        <li>
+          <form action="/logout" method="post">
+            <Button id="logout-button">LOGOUT</Button>
+          </form>
+        </li>
+
+        <%} %>
+
+        <label for="check" class="close-menu"
+          ><i class="fas fa-times"></i
+        ></label>
+      </span>
+      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head.ejs')%>
+    <link rel="stylesheet" href="/styles/contactUs.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('includes/header.ejs')%>
+    <main>
+      <div class="container">
+        <h1>connect with us</h1>
+        <p>
+          We would love to respond to your queries and help you.<br />
+          Feel free to get in touch with us.
+        </p>
+        <div class="contact-box">
+          <div class="contact-left">
+            <h3>send your request</h3>
+            <form action="/contactUs" method="post">
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="full-name">Full name</label>
+                  <input type="text" name="fullname" id="full-name" />
+                </div>
+                <div class="input-group">
+                  <label for="mobile-no">Mobile Number</label>
+                  <input type="tel" name="mobileno" id="mobile-no" />
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="email">Email Id</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="input-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" id="subject" />
+                </div>
+              </div>
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="8"></textarea>
+              <button>Submit</button>
+            </form>
+          </div>
+          <div class="contact-right">
+            <h3>reach us</h3>
+            <table>
+              <tr>
+                <td>Email</td>
+                <td>onlineblooddonationsystem@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>9121644531</td>
+              </tr>
+              <tr>
+                <td id="address-label">Address</td>
+                <td>
+                  Aziznagar Gate, Chilkur Balaji Road, Himayat Sagar Rd,
+                  Hyderabad, Telangana 500075
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('includes/footer.ejs')%>;
+  </body>
+</html>

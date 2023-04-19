@@ -1,0 +1,11 @@
+<td>1</td>
+<td><%=info.name %></td>
+<td><%=info.email %></td>
+<td><%=info.mobileNo %></td>
+<td><%=info.subject %></td>
+<td><time datetime="<%= info.date %>"><%= info.date %></time></td>
+<td>
+  <form action="/donarQ/<%=info._id %>/delete" method="post">
+    <button>Delete</button>
+  </form>
+</td>

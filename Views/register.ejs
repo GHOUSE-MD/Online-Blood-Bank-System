@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/login.css" />
+    <%- include('includes/head.ejs')%>
+  </head>
+  <body>
+    <%- include('includes/header.ejs')%>
+    <main>
+      <div class="register-container">
+        <h2 class="register-title">Signup</h2>
+        <form action="/register" method="post">
+          <div class="register-input-field-container">
+            <div class="register-input-field">
+              <% if(InputData.hasError) { %>
+              <p><%= InputData.message %></p>
+              <% } %>
+              <input
+                type="text"
+                name="email"
+                value="<%= InputData.email %>"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="register-input-field">
+              <input
+                type="password"
+                name="password"
+                class="password"
+                value="<%= InputData.password %>"
+                placeholder="Create a password"
+              />
+            </div>
+            <div class="register-input-field">
+              <input
+                type="password"
+                name="repassword"
+                value="<%= InputData.repassword%>"
+                class="password"
+                placeholder="Confirm a password"
+              />
+            </div>
+          </div>
+
+          <div class="register-input-field-button">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('includes/footer.ejs')%>
+  </body>
+</html>

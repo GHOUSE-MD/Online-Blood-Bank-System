@@ -1,0 +1,16 @@
+<tr>
+  <td><%= info.name %></td>
+  <td><%= info.mobileNo %></td>
+  <td><%= info.email %></td>
+  <td><%= info.age%></td>
+  <td><%= info.gender %></td>
+  <td><%= info.bg.name %></td>
+
+  <td><%= info.mandal.name %></td>
+  <td><%= info.address %></td>
+  <td>
+    <form action="/donar/<%=info._id %>/delete" method="post">
+      <button>Delete</button>
+    </form>
+  </td>
+</tr>

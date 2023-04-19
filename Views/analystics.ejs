@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/adminHead.ejs')%>
+    <link rel="stylesheet" href="/styles/AdminBlood/analytics.css" />
+    <script src="/scripts/adminB/script.js" defer></script>
+    <title>Analytics</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="/scripts/adminB/pieChart.js" defer></script>
+    <script src="/scripts/adminB/barGraph.js" defer></script>
+    <script src="/scripts/adminB/doughnut.js" defer></script>
+    <!-- SIDEBAR -->
+    <%- include('includes/adminAside.ejs')%>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <%- include('includes/adminNavigation.ejs')%>
+      <!-- NAVBAR -->
+      <!-- MAIN -->
+      <main>
+        <div id="graph-blood-type-data">
+          <h3 id="a+"><%= Ap %></h3>
+          <h3 id="a-"><%= An %></h3>
+          <h3 id="b+"><%= Bp %></h3>
+          <h3 id="b-"><%= Bn %></h3>
+          <h3 id="ab+"><%= ABp %></h3>
+          <h3 id="ab-"><%= ABn %></h3>
+          <h3 id="o+"><%= Op %></h3>
+          <h3 id="o-"><%= On %></h3>
+        </div>
+        <div class="head-title">
+          <div class="left">
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">AdminHub</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Analytics</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="container-content">
+            <div class="chart">
+              <canvas id="doughnut" width="30" height="30"></canvas>
+            </div>
+          </div>
+          <div class="container-content">
+            <div class="chart">
+              <canvas id="piechart" width="30" height="30"></canvas>
+            </div>
+          </div>
+          <div class="container-content" id="third-grid">
+            <div class="chart" id="bar-graph">
+              <canvas id="barchart" width="30" height="30"></canvas>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+  </body>
+</html>

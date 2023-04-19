@@ -1,0 +1,134 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#lat,
+#long {
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(255, 167, 167);
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+#donarform form {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.125rem;
+  margin-bottom: 1.25rem;
+  width: 40rem;
+  margin: auto;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  color: rgb(66, 76, 91);
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+#section-2 ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section-2 li {
+  width: 11rem;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 1.5rem;
+  padding: 0.55rem;
+  border: 1px solid rgb(152, 159, 184);
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#section-3 {
+  position: relative;
+  bottom: 1rem;
+}
+
+#section-4 {
+  position: relative;
+  bottom: 0.625rem;
+}
+
+#section-4 label {
+  text-align: left;
+}
+
+#section-4 textarea {
+  height: 25vh;
+}
+
+#section-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-5 button,
+#locBtn {
+  bottom: 0.625rem;
+  font: inherit;
+  color: white;
+  background-color: #24a0ed;
+  border-color: #24a0ed;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px #24a0ed;
+  margin-top: 1rem;
+}
+
+@media (max-width: 42rem) {
+  #donarform {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    margin-bottom: 1.25rem;
+  }
+
+  #section-2 ul {
+    flex-direction: column;
+  }
+
+  #section-2 li {
+    width: 100%;
+  }
+}

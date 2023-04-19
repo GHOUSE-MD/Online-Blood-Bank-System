@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('includes/adminHead.ejs')%>
+    <link rel="stylesheet" href="/styles/AdminBlood/message.css" />
+    <script src="/scripts/adminB/script.js" defer></script>
+
+    <title>Messages</title>
+</head>
+
+<body>
+  <!-- SIDEBAR -->
+  <%- include('includes/adminAside.ejs')%>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <%- include('includes/adminNavigation.ejs')%>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main class="box">
+          <div class="head-title">
+            <div class="left">
+              <ul class="breadcrumb">
+                <li>
+                  <a href="#">AdminHub</a>
+                </li>
+                <li><i class="bx bx-chevron-right"></i></li>
+                <li>
+                  <a class="active" href="#">Messages</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <section id="main-content">
+            <% if(!infos || infos.length===0) { %>
+              <h1 id="main-title">No messages</h1>
+              <% } else{ %>
+                <table>
+                  <tr>
+                    <th>S.NO</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile Number</th>
+                    <th>Message</th>
+                    <th>Posting date</th>
+                    <th>Action</th>
+                  </tr>
+                  <% for(const info of infos){ %>
+                    <tr>
+                      <%- include('includes/admin-mess.ejs',{info:info}) %>
+                    </tr>
+                  <% }%>
+                </table>
+                <% } %>
+          </section>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+</body>
+
+</html>
